@@ -5,7 +5,14 @@
     <form method="POST" action="{% url 'register' %}">
         {% csrf_token %}
         {% if form.errors %}
-        <p>Error</p>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <p>Oops Errors....</p>
+
+        </div>
+
         {% endif %}
         {{ form.as_p }}
 

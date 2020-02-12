@@ -9,7 +9,7 @@ class SignUpForm(UserCreationForm):
         attrs={'class': 'form-control'}))
     first_name = forms.CharField(label="", max_length=125, widget=forms.TextInput(
         attrs={'class': 'form-control'}))
-    last_name = forms.CharField(max_length=125, widget=forms.TextInput(
+    last_name = forms.CharField(label="", max_length=125, widget=forms.TextInput(
         attrs={'class': 'form-control'}))
 
     class Meta:
